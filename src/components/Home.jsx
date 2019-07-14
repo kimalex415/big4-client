@@ -56,9 +56,7 @@ class Home extends Component {
       })
     );
     fetchInstagramPosts().then(resp =>
-      this.setState({ instaPosts: resp.data }, () =>
-        console.log(this.state.instaPosts)
-      )
+      this.setState({ instaPosts: resp.data })
     );
   };
 
