@@ -5,7 +5,9 @@ const url = "https://www.googleapis.com/youtube/v3/";
 const getYoutubeVideos = search => {
   const config = {
     method: "GET",
-    url: `${url}search?part=snippet&maxResults=2&order=rating&q=${search}&key=AIzaSyCDEOc2nuW2VnB2QhHbeGIvOLBu62PGwpQ`,
+    url: `${url}search?part=snippet&maxResults=2&order=rating&q=${search}&key=${
+      process.env.REACT_APP_YOUTUBE_API_KEY
+    }`,
     crossDomain: true,
     headers: { "Content-Type": "application/json" }
   };

@@ -13,7 +13,9 @@ const getPixaby = search => {
 
   const config = {
     method: "GET",
-    url: `https://pixabay.com/api/?key=12390634-d539c718770db7832aeddc6af&q=${wordToSearch}&image_type=photo&per_page=8&safesearch=true`,
+    url: `https://pixabay.com/api/?key=${
+      process.env.REACT_APP_PIXABAY_API_KEY
+    }&q=${wordToSearch}&image_type=photo&per_page=8&safesearch=true`,
     crossDomain: true,
     headers: { "Content-Type": "application/json" }
   };

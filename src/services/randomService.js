@@ -19,7 +19,9 @@ const randomQuote = () => {
 const fetchInstagramUser = () => {
   const config = {
     method: "GET",
-    url: `${instaUrl}/self/?access_token=1788471779.de740ef.44a8b94ed91b4ad1b471af8060f2dd56`,
+    url: `${instaUrl}/self/?access_token=${
+      process.env.REACT_APP_INSTAGRAM_API_KEY
+    }`,
     crossDomain: true,
     headers: { "Content-Type": "application/json" }
   };
@@ -31,7 +33,9 @@ const fetchInstagramUser = () => {
 const fetchInstagramPosts = () => {
   const config = {
     method: "GET",
-    url: `${instaUrl}/self/media/recent/?access_token=1788471779.de740ef.44a8b94ed91b4ad1b471af8060f2dd56`,
+    url: `${instaUrl}/self/media/recent/?access_token=${
+      process.env.REACT_APP_INSTAGRAM_API_KEY
+    }`,
     crossDomain: true,
     headers: { "Content-Type": "application/json" }
   };
