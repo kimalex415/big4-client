@@ -16,8 +16,9 @@ const Header = () => {
             "Leg Day All Day"
           </h2> */}
           <h1 className="mega montserrat bold">
-            Everyday is <span className="color-emphasis-1">legday.</span><br />
-            Not tommorrow but <span className="color-emphasis-1">today.</span>
+            Everyday is <span className="color-emphasis-1">legday.</span>
+            <br />
+            Not tomorrow but <span className="color-emphasis-1">today.</span>
           </h1>
         </div>
       </div>
