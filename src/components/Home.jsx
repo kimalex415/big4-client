@@ -120,17 +120,13 @@ class Home extends Component {
     if (values.id) {
       this.props.editLegWorkout(values, values.id);
       this.setState({ initialValues });
-      console.log("EDIT clicked", this.state.initialValues);
     } else {
       this.props.addLegWorkout(values);
       this.setState({ initialValues });
-
-      console.log("POST clicked", this.state.initialValues);
     }
   };
 
   handleImgSrc = imgSrc => {
-    console.log("initial values", this.state.initialValues);
     const newInitialValues = {
       ...this.state.initialValues,
       image: imgSrc
@@ -195,7 +191,6 @@ class Home extends Component {
     return (
       <React.Fragment>
         <Header />
-        <h1>{process.env.REACT_APP_NAME}</h1>
         <Youtube
           inputValue={this.state.search}
           inputOnChange={this.handleOnChange}
